@@ -1,2 +1,2 @@
 # overleafRelativeLineNumbers
-A basic chrome extension that changes the line numbering when using Overleaf
+Changes the line numbering in Overleaf to relative style.

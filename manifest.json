@@ -1,0 +1,6 @@
+{
+    "name": "Relative Line Numbering for Overleaf",
+    "description": "Changes line numbering in Overleaf to relative style.",
+    "version": "1.0",
+    "manifest_version": 3
+}
