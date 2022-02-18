@@ -1,6 +1,26 @@
 {
     "name": "Relative Line Numbering for Overleaf",
-    "description": "Changes line numbering in Overleaf to relative style.",
+    "description": "Changes line numbering style in Overleaf to relative.",
     "version": "1.0",
-    "manifest_version": 3
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.overleaf.com/*"
+            ],
+            "js": [
+                "inject.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "content.js"
+            ],
+            "matches": [
+                "*://*.overleaf.com/*"
+            ]
+        }
+    ]
 }
