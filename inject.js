@@ -5,7 +5,7 @@
  * @param  {type} tag The tag as string, where the script will be append (default: 'body').
  * @see    {@link https://gist.github.com/devjin0617/3e8d72d94c1b9e69690717a219644c7a}
  */
-function injectScript(file_path, tag) {
+let injectScript = (file_path, tag) => {
     var node = document.getElementsByTagName(tag)[0];
     var script = document.createElement('script');
     script.setAttribute('type', 'text/javascript');
@@ -13,9 +13,23 @@ function injectScript(file_path, tag) {
     node.appendChild(script);
 }
 
-// Changed from chrome.extension (Manifest V2) to chrome.runtime (Manifest V3) 
-chrome.storage.sync.get("isEnabled", ({ isEnabled }) => {
+let handleUpdate = (isEnabled) => {
     if (isEnabled) {
-        injectScript(chrome.runtime.getURL('content.js'), 'body');
+        injectScript(chrome.runtime.getURL('enable.js'), 'body');
+    } else {
+        injectScript(chrome.runtime.getURL('disable.js'), 'body');
+    }
+}
+
+// Set initial value on load
+chrome.storage.sync.get("isEnabled", ({ isEnabled }) => {
+    handleUpdate(isEnabled);
+});
+
+chrome.storage.onChanged.addListener(function (changes, namespace) {
+    for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
+        if (key == "isEnabled") {
+            handleUpdate(newValue);
+        }
     }
 });
