@@ -1,7 +1,9 @@
 body {
-    min-width:70px;
+    min-width: 70px;
     border-radius: 25%;
-    background-color: darkslategrey;
+    background-color: #1e2530;
+    /* color: #959dab; */
+    color: #fff;
 }
 
 /* The switch - the box around the slider */
@@ -27,7 +29,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #959dab;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -45,11 +47,11 @@ body {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #345e9c;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #345e9c;
 }
 
 input:checked + .slider:before {
