@@ -14,4 +14,8 @@ function injectScript(file_path, tag) {
 }
 
 // Changed from chrome.extension (Manifest V2) to chrome.runtime (Manifest V3) 
-injectScript(chrome.runtime.getURL('content.js'), 'body');
+chrome.storage.sync.get("isEnabled", ({ isEnabled }) => {
+    if (isEnabled) {
+        injectScript(chrome.runtime.getURL('content.js'), 'body');
+    }
+});
