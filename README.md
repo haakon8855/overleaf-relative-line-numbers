@@ -1,14 +1,14 @@
 # Relative Line Numbering for Overleaf
 
-Adds the ability to change the line numbering style in Overleaf to relative,
-which is very convenient for Vim users.
+Adds the ability to change the line numbering style in Overleaf to relative.
+A very convenient feature for Vim users.
 
 ## Installation
 
 The easiest way to install this extension is to download it from the Chrome
 Web Store [here](https://chrome.google.com/webstore/detail/relative-line-numbering-f/cpndkecejnblehgenlnogffaeekmkphh).
 
-If you would like to edit the code and test it, you can clone the repo and install it as an _unpacked extension_. Google has a [great guide](https://developer.chrome.com/docs/extensions/mv3/getstarted/) for doing that. You'll have to enable developer mode in chrome among other things to be able to do this.
+If you would like to edit the code and test it, you can clone the repo and install it as an _unpacked extension_. Google has a [great guide](https://developer.chrome.com/docs/extensions/mv3/getstarted/) for doing that. You'll have to enable developer mode in Chrome among other things to be able to do this.
 
 ## How it works
 
