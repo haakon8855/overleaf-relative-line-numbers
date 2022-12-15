@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="button.css" >
+        <link rel="stylesheet" href="button.css" />
     </head>
     <body>
         <div>
             <div>
-                <h4>Relative Line Numbering for Overleaf</h4>
+                <h3>Relative Line Numbering for Overleaf</h3>
             </div>
             <div>
                 <span>Use relative line numbering</span>
                 <label class="switch">
-                    <input id="toggleEnabled" type="checkbox" >
+                    <input id="toggleEnabled" type="checkbox" />
                     <span id="sliderElem" class="slider round"></span>
                 </label>
+            </div>
+            <br />
+            <div id="popup-help-link">
+                <p id="popup-help-link-text">Not working?</p>
+            </div>
+            <div id="popup-help-text">
+                <div>
+                    <h4>Not working?</h4>
+                </div>
+                <div>
+                    <span>
+                        1. Select "<b>Source (legacy)</b>" editor in Overleaf
+                        like this:
+                    </span>
+                </div>
+                <br />
+                <div>
+                    <img id="popup-legacy-img" src="images/legacy.png" />
+                </div>
+                <br />
+                <div>
+                    <span>2. Refresh the page</span>
+                </div>
+                <br />
+                <div>
+                    <h4>Why does this work?</h4>
+                </div>
+                <div>
+                    <span
+                        >Overleaf recently moved to a new editor, CodeMirror 6.
+                        This editor does not have support for the relative line
+                        numbering style like the old editor, Ace, had.
+                        <br /><br />It is, however, still possible to use the
+                        old editor to keep this functionality. <br /><br />This
+                        is currently the only way for this extension to work.
+                    </span>
+                </div>
             </div>
         </div>
         <script src="popup.js"></script>
