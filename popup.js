@@ -8,7 +8,7 @@ let slider = document.getElementById("sliderElem");
 let updateSlider = (isEnabled) => {
     // Updates the state of the slider button
     toggleButton.checked = isEnabled;
-}
+};
 
 // Set the slider button to the state stored in storage
 chrome.storage.sync.get("isEnabled", ({ isEnabled }) => {
@@ -31,4 +31,11 @@ toggleButton.addEventListener("click", async () => {
         chrome.storage.sync.set({ isEnabled });
         updateSlider(isEnabled);
     });
+});
+
+// Visibility of help text
+let helpLink = document.getElementById("popup-help-link");
+helpLink.addEventListener("click", () => {
+    helpLink.style.display = "none";
+    document.getElementById("popup-help-text").style.display = "inline";
 });

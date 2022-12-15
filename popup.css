@@ -1,5 +1,5 @@
 body {
-    min-width: 220px;
+    min-width: 250px;
     background-color: #1e2530;
     color: #ffffff;
     margin: 15px;
@@ -33,8 +33,8 @@ body {
 }
 
 .sliderAnim {
-    -webkit-transition: .1s;
-    transition: .1s;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
 }
 
 .slider:before {
@@ -48,8 +48,8 @@ body {
 }
 
 .sliderAnim:before {
-    -webkit-transition: .1s;
-    transition: .1s;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
 }
 
 input:checked + .slider {
@@ -73,4 +73,18 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+#popup-legacy-img {
+    width: 190px;
+    padding-left: 20px;
+}
+
+#popup-help-link-text {
+    color: #4dafef;
+    cursor: pointer;
+}
+
+#popup-help-text {
+    display: none;
 }
