@@ -1,16 +1,14 @@
-# Relative Line Numbering for Overleaf<br/>(Legacy Editor)
+# Relative Line Numbering for Overleaf<br/>(Obsolete)
 
-A Chrome extension which adds the ability to change the line numbering style in 
+### Warning: This extension no longer works due to Overleaf changing its third-party text editor. It will no longer be maintained unless a new way to enable relative numbering in the new editor is found. Please feel free to contribute or contact if you have any insight into a fix for the new editor.
+
+This Chrome extension adds the ability to change the line numbering style in 
 Overleaf to relative (Legacy editor only), a very convenient feature 
 for Vim users.
 
 ## Installation
 
 This extension can be installed either via the Chrome Web Store or manually.
-
-Remember to use the Legacy editor in Overleaf:
-
-![](images/legacy.png)
 
 ### Chrome Web Store
 
@@ -47,17 +45,20 @@ This Chrome Extension simply runs the above code each time the user loads a
 web page beginning with `overleaf.com`. The extension also has the ability
 to toggle this live.
 
-## Legacy Editor
+## New Editor
 
 On the 29th November 2022, Overleaf changed its default editor from [Ace](https://ace.c9.io/),
 to [CodeMirror 6](https://codemirror.net/). This new editor lacks the ability
 for the relative line numbering style, making this extension unusable with the
-new editor. Thankfully, for the time being, Overleaf still offers users
-the option of switching to the the legacy _Ace_ editor.
+new editor. For a while, Overleaf still offered users
+the option of switching to the the old editor _Ace_.
+
+As of 21nd February 2023, the old _Ace_ editor is no longer available, and this extension sadly no longer works.
 
 ## Acknowledgments
 
 - [dirko](https://github.com/dirko) for providing the code block above in an Overleaf feature request thread.
 
 ## License
+
 Distributed under the GPLv3 License. See `LICENSE.txt` for more information.
